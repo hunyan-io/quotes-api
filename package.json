@@ -1,0 +1,22 @@
+{
+    "name": "quotes-api",
+    "version": "1.0.0",
+    "description": "A random quotes api",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node .",
+        "dev": "nodemon ."
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.2",
+        "helmet": "^4.6.0",
+        "joi": "^17.5.0",
+        "morgan": "^1.10.0",
+        "pg": "^8.7.1",
+        "sequelize": "^6.12.0"
+    }
+}
