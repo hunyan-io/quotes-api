@@ -7,7 +7,12 @@ exports.getRandomQuotes = async (req, res, next) => {
             order: sequelize.random(),
             limit: req.query.count,
         });
-        res.status(200).json(result.map((quote) => quote.toJSON()));
+        res.status(200).json(
+            result.map((quote) => ({
+                id: quote.get("id"),
+                content: quote.get("content"),
+            }))
+        );
     } catch (err) {
         next(err);
     }
